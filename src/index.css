@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+  font-size: 25px;
+  background-color: var(--BG);
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+
+  --BG: #eff5ff;
+  --BorderColor: #d6d9e6;
+  --Denim: #022959;
+  --Grey: #9699aa;
+  --LightGrey: #d6d9e6;
+  --LightBlue: #abbcff;
+  --Orange: #ffaf7e;
+  --Pink: #f9818e;
+  --Purple: #483eff;
+  --RedErrors: #ee374a;
+  --SkyBlue: #bee2fd;
+  --VeryLightGrey: #f8f9ff;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: auto;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: auto;
+}
+
+h3 {
+  font-size: 16px;
+  line-height: 25;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 14px;
+  line-height: auto;
+  font-weight: 400;
+}
+
+p {
+  font-size: 12px;
+  line-height: auto;
+  font-weight: 400;
+}
