@@ -1,3 +1,5 @@
+import "./Button.scss";
+
 const Button = ({ children, className, onClick, onSubmit }) => {
   return (
     <button
