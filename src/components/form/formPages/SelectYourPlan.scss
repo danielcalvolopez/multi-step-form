@@ -60,4 +60,29 @@
       }
     }
   }
+
+  .select-plan-toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--VeryLightGrey);
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 7px;
+    .select-plan-toggle {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 16px;
+      font-weight: bold;
+
+      .color-on {
+        color: var(--Denim);
+      }
+
+      .color-off {
+        color: var(--Grey);
+      }
+    }
+  }
 }

@@ -3,6 +3,7 @@ import ArcadeLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/im
 import AdvancedLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/icon-advanced.svg";
 import ProLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/icon-pro.svg";
 import "./SelectYourPlan.scss";
+import ToggleSwitch from "../../UI/ToggleSwitch";
 
 const SelectYourPlan = () => {
   return (
@@ -39,7 +40,13 @@ const SelectYourPlan = () => {
             </div>
           </div>
         </div>
-        <div className="select-plan-toggle"></div>
+        <div className="select-plan-toggle-container">
+          <div className="select-plan-toggle">
+            <label className="color-on">Monthly</label>
+            <ToggleSwitch />
+            <label className="color-on">Yearly</label>
+          </div>
+        </div>
       </div>
       <FormFooter />
     </div>
