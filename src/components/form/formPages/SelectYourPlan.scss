@@ -29,6 +29,26 @@
       gap: 20px;
       cursor: pointer;
 
+      input {
+        display: none;
+
+        &[id="arcade"]:checked ~ label[for="arcade"] .select-plan-card {
+          background-color: var(--VeryLightGrey);
+          border: 1px solid var(--Purple);
+          border-radius: 7px;
+        }
+        &[id="advanced"]:checked ~ label[for="advanced"] .select-plan-card {
+          background-color: var(--VeryLightGrey);
+          border: 1px solid var(--Purple);
+          border-radius: 7px;
+        }
+        &[id="pro"]:checked ~ label[for="pro"] .select-plan-card {
+          background-color: var(--VeryLightGrey);
+          border: 1px solid var(--Purple);
+          border-radius: 7px;
+        }
+      }
+
       .select-plan-card {
         display: flex;
         flex-direction: column;
@@ -39,6 +59,7 @@
         border: 1px solid var(--BorderColor);
         border-radius: 7px;
         padding: 15px;
+        cursor: pointer;
 
         .plan-info {
           display: flex;
@@ -52,11 +73,6 @@
             color: var(--Grey);
           }
         }
-      }
-
-      .select-plan-card-selected {
-        background-color: var(--VeryLightGrey);
-        border: 1px solid var(--Purple);
       }
     }
   }

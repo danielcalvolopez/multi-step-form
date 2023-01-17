@@ -15,30 +15,39 @@ const SelectYourPlan = () => {
 
       <div className="select-plan-body">
         <div className="select-plan-options">
-          <div className="select-plan-card" onClick={() => {}}>
-            <img src={ArcadeLogo} />
-            <div className="plan-info">
-              <h3>Arcade</h3>
-              <p>$9/mo</p>
-              <p></p>
+          <input type="radio" name="card" id="arcade" />
+          <input type="radio" name="card" id="advanced" />
+          <input type="radio" name="card" id="pro" />
+          <label htmlFor="arcade">
+            <div className="select-plan-card" onClick={() => {}}>
+              <img src={ArcadeLogo} />
+              <div className="plan-info">
+                <h3>Arcade</h3>
+                <p>$9/mo</p>
+                <p></p>
+              </div>
             </div>
-          </div>
-          <div className="select-plan-card">
-            <img src={AdvancedLogo} />
-            <div className="plan-info">
-              <h3>Advanced</h3>
-              <p>$12/mo</p>
-              <p></p>
+          </label>
+          <label htmlFor="advanced">
+            <div className="select-plan-card">
+              <img src={AdvancedLogo} />
+              <div className="plan-info">
+                <h3>Advanced</h3>
+                <p>$12/mo</p>
+                <p></p>
+              </div>
             </div>
-          </div>
-          <div className="select-plan-card">
-            <img src={ProLogo} />
-            <div className="plan-info">
-              <h3>Pro</h3>
-              <p>$15/mo</p>
-              <p></p>
+          </label>
+          <label htmlFor="pro">
+            <div className="select-plan-card">
+              <img src={ProLogo} />
+              <div className="plan-info">
+                <h3>Pro</h3>
+                <p>$15/mo</p>
+                <p></p>
+              </div>
             </div>
-          </div>
+          </label>
         </div>
         <div className="select-plan-toggle-container">
           <div className="select-plan-toggle">
