@@ -61,6 +61,10 @@
         padding: 15px;
         cursor: pointer;
 
+        &:hover {
+          border: 1px solid var(--Purple);
+        }
+
         .plan-info {
           display: flex;
           flex-direction: column;

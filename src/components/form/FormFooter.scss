@@ -2,12 +2,16 @@
   display: flex;
   align-items: center;
   width: 100%;
-  justify-content: right;
+  justify-content: space-between;
   margin-top: 60px;
   .go-back {
-    display: none;
+    display: block;
     cursor: pointer;
     font-size: 16px;
     color: var(--Grey);
+
+    &:hover {
+      color: var(--Denim);
+    }
   }
 }

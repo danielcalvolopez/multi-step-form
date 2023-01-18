@@ -52,6 +52,10 @@
     border-radius: 7px;
     cursor: pointer;
 
+    &:hover {
+      border: 1px solid var(--Purple);
+    }
+
     .addons-checkbox-and-info {
       display: flex;
       flex-direction: row;
