@@ -1,0 +1,100 @@
+.finishing-up-container {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 80px 100px;
+  width: 100%;
+  height: 100%;
+  .finishing-up-body {
+    width: 100%;
+    margin-bottom: 40px;
+    .price-breakdown {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--VeryLightGrey);
+      padding: 25px;
+      gap: 10px;
+      border-radius: 9px;
+      .plan {
+        display: flex;
+        justify-content: space-between;
+        .plan-info {
+          margin-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          h3 {
+            color: var(--Denim);
+          }
+
+          p {
+            font-size: 14px;
+            color: var(--Grey);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            cursor: pointer;
+
+            &:hover {
+              color: var(--Purple);
+            }
+          }
+        }
+
+        .plan-price {
+          font-size: 16px;
+          color: var(--Denim);
+          font-weight: bold;
+        }
+      }
+    }
+
+    .service-breakdown {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: space-between;
+      margin-top: 10px;
+
+      .service {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+        color: var(--Grey);
+
+        .description {
+          font-size: 14px;
+        }
+
+        .price {
+          font-size: 14px;
+          color: var(--Denim);
+        }
+      }
+    }
+
+    .division-line {
+      background-color: var(--LightGrey);
+      height: 1px;
+    }
+
+    .total-price {
+      display: flex;
+      justify-content: space-between;
+      padding: 25px;
+
+      .total-price-text {
+        color: var(--Grey);
+        font-size: 14px;
+      }
+
+      .total-price-price {
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--Purple);
+      }
+    }
+  }
+}
