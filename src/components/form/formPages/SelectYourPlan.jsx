@@ -4,14 +4,15 @@ import AdvancedLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/
 import ProLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/icon-pro.svg";
 import "./SelectYourPlan.scss";
 import ToggleSwitch from "../../UI/ToggleSwitch";
+import FormHeader from "../FormHeader";
 
 const SelectYourPlan = () => {
   return (
     <div className="select-plan-container">
-      <div className="select-plan-header">
-        <h1>Select your plan</h1>
-        <h3>You have the option of monthly or yearly billing.</h3>
-      </div>
+      <FormHeader
+        title="Select your plan"
+        description="You have the option of monthly or yearly billing."
+      />
 
       <div className="select-plan-body">
         <div className="select-plan-options">
@@ -57,6 +58,7 @@ const SelectYourPlan = () => {
           </div>
         </div>
       </div>
+
       <FormFooter />
     </div>
   );

@@ -9,34 +9,34 @@
       background-color: var(--VeryLightGrey);
       border: 1px solid var(--Purple);
       border-radius: 7px;
-      transition: 0.4s;
+      transition: all 0.4s ease-in-out;
     }
     &[id="online"]:checked ~ label[for="online"] .checkbox {
       background-color: var(--Purple);
       border: none;
-      transition: 0.4s;
+      transition: all 0.4s ease-in-out;
     }
     &[id="storage"]:checked ~ label[for="storage"] .select-addons-card {
       background-color: var(--VeryLightGrey);
       border: 1px solid var(--Purple);
       border-radius: 7px;
-      transition: 0.4s;
+      transition: all 0.4s ease-in-out;
     }
     &[id="storage"]:checked ~ label[for="storage"] .checkbox {
       background-color: var(--Purple);
       border: none;
-      transition: 0.4s;
+      transition: all 0.4s ease-in-out;
     }
     &[id="profile"]:checked ~ label[for="profile"] .select-addons-card {
       background-color: var(--VeryLightGrey);
       border: 1px solid var(--Purple);
       border-radius: 7px;
-      transition: 0.4s;
+      transition: all 0.4s ease-in-out;
     }
     &[id="profile"]:checked ~ label[for="profile"] .checkbox {
       background-color: var(--Purple);
       border: none;
-      transition: 0.4s;
+      transition: all 0.4s ease-in-out;
     }
   }
 

@@ -41,6 +41,20 @@
         }
       }
 
+      .input-error {
+        border: 1px solid var(--RedErrors);
+      }
+
+      .item-description {
+        display: flex;
+        justify-content: space-between;
+
+        .error {
+          color: var(--RedErrors);
+          font-weight: bold;
+        }
+      }
+
       label {
         color: var(--Denim);
         font-size: 14px;

@@ -1,14 +1,15 @@
 import FormFooter from "../FormFooter";
+import FormHeader from "../FormHeader";
 import "./PickAddOns.scss";
 import CheckMark from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/check-mark.svg";
 
 const PickAddOns = () => {
   return (
     <div className="select-plan-container">
-      <div className="select-plan-header">
-        <h1>Pick add-ons</h1>
-        <h3>Add-ons help enhance your gaming experience.</h3>
-      </div>
+      <FormHeader
+        title="Pick add-ons"
+        description="Add-ons help enhance your gaming experience."
+      />
 
       <div className="select-addons-body">
         <div className="select-addons-options">
