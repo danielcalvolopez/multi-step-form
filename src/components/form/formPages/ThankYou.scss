@@ -1,0 +1,25 @@
+.thank-you-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 80px 100px;
+  width: 100%;
+  height: 100%;
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    color: var(--Denim);
+  }
+
+  p {
+    text-align: center;
+    color: var(--Grey);
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
