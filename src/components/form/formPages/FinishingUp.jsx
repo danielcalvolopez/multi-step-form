@@ -34,7 +34,7 @@ const FinishingUp = () => {
 
         <div className="total-price">
           <p className="total-price-text">Total (per month)</p>
-          <p className="total-price-price">+$12/mo</p>
+          <p className="total-price-price">$12/mo</p>
         </div>
       </div>
 
