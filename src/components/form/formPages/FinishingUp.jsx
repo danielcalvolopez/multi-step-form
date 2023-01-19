@@ -1,12 +1,14 @@
+import useFormContext from "../../../hooks/form/useFormContext";
 import FormFooter from "../FormFooter";
 import FormHeader from "../FormHeader";
 import "./FinishingUp.scss";
 
 const FinishingUp = () => {
+  const { title } = useFormContext();
   return (
     <div className="finishing-up-container">
       <FormHeader
-        title="Finishing up"
+        title={title[3]}
         description="Double-check everything looks OK before confirming."
       />
 

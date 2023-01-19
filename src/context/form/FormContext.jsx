@@ -33,17 +33,6 @@ export const FormmProvider = ({ children }) => {
     setPage((prev) => prev + 1);
   };
 
-  const handleChange = (event) => {
-    const type = event.target.type;
-    const value =
-      type === "checkbox" ? event.target.checked : event.target.value;
-
-    setData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
-
   return (
     <FormContext.Provider
       value={{ title, page, setPage, data, setData, back, next }}

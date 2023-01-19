@@ -1,13 +1,15 @@
+import useFormContext from "../../../hooks/form/useFormContext";
 import FormFooter from "../FormFooter";
 import FormHeader from "../FormHeader";
 import "./PickAddOns.scss";
 import CheckMark from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/check-mark.svg";
 
 const PickAddOns = () => {
+  const { title } = useFormContext();
   return (
     <div className="select-plan-container">
       <FormHeader
-        title="Pick add-ons"
+        title={title[2]}
         description="Add-ons help enhance your gaming experience."
       />
 

@@ -1,13 +1,15 @@
+import useFormContext from "../../../hooks/form/useFormContext";
 import Input from "../../UI/Input";
 import FormFooter from "../FormFooter";
 import FormHeader from "../FormHeader";
 import "./PersonalInfo.scss";
 
 const PersonalInfo = () => {
+  const { title } = useFormContext();
   return (
     <div className="personal-info-container">
       <FormHeader
-        title="Personal info"
+        title={title[0]}
         description="Please provide your name, email address, and phone number."
       />
 

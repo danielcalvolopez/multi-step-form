@@ -5,12 +5,14 @@ import ProLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/image
 import "./SelectYourPlan.scss";
 import ToggleSwitch from "../../UI/ToggleSwitch";
 import FormHeader from "../FormHeader";
+import useFormContext from "../../../hooks/form/useFormContext";
 
 const SelectYourPlan = () => {
+  const { title } = useFormContext();
   return (
     <div className="select-plan-container">
       <FormHeader
-        title="Select your plan"
+        title={title[1]}
         description="You have the option of monthly or yearly billing."
       />
 
