@@ -5,7 +5,18 @@ import FormHeader from "../FormHeader";
 import "./PersonalInfo.scss";
 
 const PersonalInfo = () => {
-  const { title } = useFormContext();
+  const { title, data, setData } = useFormContext();
+
+  const handleName = (event) => {
+    setData({ ...data, name: event.target.value });
+  };
+  const handleEmail = (event) => {
+    setData({ ...data, email: event.target.value });
+  };
+  const handlePhone = (event) => {
+    setData({ ...data, phone: event.target.value });
+  };
+
   return (
     <div className="personal-info-container">
       <FormHeader
@@ -13,29 +24,45 @@ const PersonalInfo = () => {
         description="Please provide your name, email address, and phone number."
       />
 
-      <div className="personal-info-form">
+      <form className="personal-info-form">
         <div className="personal-info-form-item">
           <div className="item-description">
             <label>Name</label>
             {/* <label className="error">This field is required</label> */}
           </div>
-          <Input className="input" placeholder="e.g. Stephen King" />
+          <Input
+            className="input"
+            value={data[0]}
+            onChange={handleName}
+            placeholder="e.g. Stephen King"
+            name="name"
+          />
         </div>
         <div className="personal-info-form-item">
           <div className="item-description">
             <label>Email Address</label>
             {/* <label className="error">This field is required</label> */}
           </div>
-          <Input className="input" placeholder="e.g. stephenking@lorem.com" />
+          <Input
+            className="input"
+            type="email"
+            onChange={handleEmail}
+            placeholder="e.g. stephenking@lorem.com"
+          />
         </div>
         <div className="personal-info-form-item">
           <div className="item-description">
             <label>Phone Number</label>
             {/* <label className="error">This field is required</label> */}
           </div>
-          <Input className="input" placeholder="e.g. +1 234 567 890" />
+          <Input
+            className="input"
+            onChange={handlePhone}
+            type="number"
+            placeholder="e.g. +44 7128 184 746"
+          />
         </div>
-      </div>
+      </form>
 
       <FormFooter />
     </div>

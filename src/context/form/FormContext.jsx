@@ -17,22 +17,21 @@ export const FormmProvider = ({ children }) => {
 
   const [data, setData] = useState({
     name: "",
-    address: "",
+    email: "",
     phone: "",
     plan: "",
     onlineService: false,
     largerStorage: false,
     customProfile: false,
+    totalPrice: 0,
   });
 
-  const back = (event) => {
-    event.preventDefault();
+  const back = () => {
     if (page < 1) return;
     setPage((prev) => prev - 1);
   };
 
-  const next = (event) => {
-    event.preventDefault();
+  const next = () => {
     if (page > 3) return;
     setPage((prev) => prev + 1);
   };

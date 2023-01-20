@@ -2,7 +2,7 @@ import useFormContext from "../../hooks/form/useFormContext";
 import Button from "../UI/Button";
 import "./FormFooter.scss";
 
-const FormFooter = () => {
+const FormFooter = ({ onSubmit }) => {
   const { page, back, next } = useFormContext();
 
   return (
@@ -12,7 +12,9 @@ const FormFooter = () => {
           Go Back
         </div>
       )}
-      <Button onClick={next}>{page === 3 ? "Confirm" : "Next Step"}</Button>
+      <Button onSubmit={onSubmit} onClick={next}>
+        {page === 3 ? "Confirm" : "Next Step"}
+      </Button>
     </div>
   );
 };

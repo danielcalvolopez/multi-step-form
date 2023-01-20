@@ -32,7 +32,8 @@ const PickAddOns = () => {
                 </div>
               </div>
               <p className="price">
-                +${monthly ? addons[0].pricePerMonth : addons[0].pricePerYear}/
+                +£
+                {monthly ? addons[0].pricePerMonth : addons[0].pricePerYear}/
                 {monthly ? tariff.monthly : tariff.yearly}
               </p>
             </div>
@@ -49,7 +50,8 @@ const PickAddOns = () => {
                 </div>
               </div>
               <p className="price">
-                +${monthly ? addons[1].pricePerMonth : addons[1].pricePerYear}/
+                +£
+                {monthly ? addons[1].pricePerMonth : addons[1].pricePerYear}/
                 {monthly ? tariff.monthly : tariff.yearly}
               </p>
             </div>
@@ -66,7 +68,8 @@ const PickAddOns = () => {
                 </div>
               </div>
               <p className="price">
-                +${monthly ? addons[2].pricePerMonth : addons[2].pricePerYear}/
+                +£
+                {monthly ? addons[2].pricePerMonth : addons[2].pricePerYear}/
                 {monthly ? tariff.monthly : tariff.yearly}
               </p>
             </div>

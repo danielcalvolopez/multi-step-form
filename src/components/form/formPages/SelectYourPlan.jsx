@@ -33,7 +33,7 @@ const SelectYourPlan = () => {
               <div className="plan-info">
                 <h3>{plans[0].name}</h3>
                 <p>
-                  ${monthly ? plans[0].pricePerMonth : plans[0].pricePerYear}/
+                  £{monthly ? plans[0].pricePerMonth : plans[0].pricePerYear}/
                   {monthly ? tariff.monthly : tariff.yearly}
                 </p>
                 <p></p>
@@ -46,7 +46,7 @@ const SelectYourPlan = () => {
               <div className="plan-info">
                 <h3>{plans[1].name}</h3>
                 <p>
-                  ${monthly ? plans[1].pricePerMonth : plans[1].pricePerYear}/
+                  £{monthly ? plans[1].pricePerMonth : plans[1].pricePerYear}/
                   {monthly ? tariff.monthly : tariff.yearly}
                 </p>
                 <p></p>
@@ -59,7 +59,7 @@ const SelectYourPlan = () => {
               <div className="plan-info">
                 <h3>{plans[2].name}</h3>
                 <p>
-                  ${monthly ? plans[2].pricePerMonth : plans[2].pricePerYear}/
+                  £{monthly ? plans[2].pricePerMonth : plans[2].pricePerYear}/
                   {monthly ? tariff.monthly : tariff.yearly}
                 </p>
                 <p></p>
