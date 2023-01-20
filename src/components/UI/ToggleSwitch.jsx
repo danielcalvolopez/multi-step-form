@@ -1,9 +1,10 @@
+import useFormContext from "../../hooks/form/useFormContext";
 import "./ToggleSwitch.scss";
 
-const ToggleSwitch = () => {
+const ToggleSwitch = ({ value, onChange }) => {
   return (
     <label className="switch">
-      <input type="checkbox" />
+      <input value={value} onChange={onChange} type="checkbox" />
       <span className="slider" />
     </label>
   );

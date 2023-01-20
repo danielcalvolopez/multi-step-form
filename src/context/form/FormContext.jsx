@@ -13,6 +13,8 @@ export const FormmProvider = ({ children }) => {
 
   const [page, setPage] = useState(0);
 
+  const [monthly, setMonthly] = useState(true);
+
   const [data, setData] = useState({
     name: "",
     address: "",
@@ -23,19 +25,31 @@ export const FormmProvider = ({ children }) => {
     customProfile: false,
   });
 
-  const back = () => {
+  const back = (event) => {
+    event.preventDefault();
     if (page < 1) return;
     setPage((prev) => prev - 1);
   };
 
-  const next = () => {
+  const next = (event) => {
+    event.preventDefault();
     if (page > 3) return;
     setPage((prev) => prev + 1);
   };
 
   return (
     <FormContext.Provider
-      value={{ title, page, setPage, data, setData, back, next }}
+      value={{
+        title,
+        page,
+        setPage,
+        data,
+        setData,
+        back,
+        next,
+        monthly,
+        setMonthly,
+      }}
     >
       {children}
     </FormContext.Provider>

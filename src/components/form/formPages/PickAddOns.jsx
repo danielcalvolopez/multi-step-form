@@ -1,11 +1,13 @@
 import useFormContext from "../../../hooks/form/useFormContext";
+import { addons } from "../../../utils/data/addons";
+import { tariff } from "../../../utils/data/plans";
 import FormFooter from "../FormFooter";
 import FormHeader from "../FormHeader";
 import "./PickAddOns.scss";
 import CheckMark from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/check-mark.svg";
 
 const PickAddOns = () => {
-  const { title } = useFormContext();
+  const { title, monthly } = useFormContext();
   return (
     <div className="select-plan-container">
       <FormHeader
@@ -29,7 +31,10 @@ const PickAddOns = () => {
                   <p>Access to multiplayer games</p>
                 </div>
               </div>
-              <p className="price">+$1/mo</p>
+              <p className="price">
+                +${monthly ? addons[0].pricePerMonth : addons[0].pricePerYear}/
+                {monthly ? tariff.monthly : tariff.yearly}
+              </p>
             </div>
           </label>
           <label htmlFor="storage">
@@ -43,7 +48,10 @@ const PickAddOns = () => {
                   <p>Extra 1TB of cloud save</p>
                 </div>
               </div>
-              <p className="price">+$2/mo</p>
+              <p className="price">
+                +${monthly ? addons[1].pricePerMonth : addons[1].pricePerYear}/
+                {monthly ? tariff.monthly : tariff.yearly}
+              </p>
             </div>
           </label>
           <label htmlFor="profile">
@@ -57,7 +65,10 @@ const PickAddOns = () => {
                   <p>Custom theme on your profile</p>
                 </div>
               </div>
-              <p className="price">+$2/mo</p>
+              <p className="price">
+                +${monthly ? addons[2].pricePerMonth : addons[2].pricePerYear}/
+                {monthly ? tariff.monthly : tariff.yearly}
+              </p>
             </div>
           </label>
         </div>
