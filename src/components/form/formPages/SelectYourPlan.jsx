@@ -9,14 +9,14 @@ import useFormContext from "../../../hooks/form/useFormContext";
 import { plans, tariff } from "../../../utils/data/plans";
 
 const SelectYourPlan = () => {
-  const { title, monthly, setMonthly } = useFormContext();
+  const { title, monthly, setMonthly, next } = useFormContext();
 
   const handleToggleMonthly = () => {
     setMonthly((prev) => !prev);
   };
 
   return (
-    <div className="select-plan-container">
+    <form onSubmit={next} className="select-plan-container">
       <FormHeader
         title={title[1]}
         description="You have the option of monthly or yearly billing."
@@ -81,7 +81,7 @@ const SelectYourPlan = () => {
       </div>
 
       <FormFooter />
-    </div>
+    </form>
   );
 };
 

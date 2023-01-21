@@ -6,9 +6,9 @@ import FormHeader from "../FormHeader";
 import "./FinishingUp.scss";
 
 const FinishingUp = () => {
-  const { title, monthly, setPage } = useFormContext();
+  const { title, monthly, setPage, next } = useFormContext();
   return (
-    <div className="finishing-up-container">
+    <form onSubmit={next} className="finishing-up-container">
       <FormHeader
         title={title[3]}
         description="Double-check everything looks OK before confirming."
@@ -52,7 +52,7 @@ const FinishingUp = () => {
       </div>
 
       <FormFooter />
-    </div>
+    </form>
   );
 };
 

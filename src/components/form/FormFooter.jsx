@@ -2,19 +2,17 @@ import useFormContext from "../../hooks/form/useFormContext";
 import Button from "../UI/Button";
 import "./FormFooter.scss";
 
-const FormFooter = ({ onSubmit }) => {
-  const { page, back, next } = useFormContext();
+const FormFooter = () => {
+  const { page, back } = useFormContext();
 
   return (
     <div className={`${page === 0 ? "footer-only-next" : "footer"}`}>
       {page !== 0 && (
-        <div className="go-back" onClick={back}>
+        <div onClick={back} className="go-back">
           Go Back
         </div>
       )}
-      <Button onSubmit={onSubmit} onClick={next}>
-        {page === 3 ? "Confirm" : "Next Step"}
-      </Button>
+      <Button>{page === 3 ? "Confirm" : "Next Step"}</Button>
     </div>
   );
 };

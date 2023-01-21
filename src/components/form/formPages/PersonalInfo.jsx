@@ -5,7 +5,7 @@ import FormHeader from "../FormHeader";
 import "./PersonalInfo.scss";
 
 const PersonalInfo = () => {
-  const { title, data, setData } = useFormContext();
+  const { title, data, setData, next } = useFormContext();
 
   const handleName = (event) => {
     setData({ ...data, name: event.target.value });
@@ -18,13 +18,13 @@ const PersonalInfo = () => {
   };
 
   return (
-    <div className="personal-info-container">
+    <form onSubmit={next} className="personal-info-container">
       <FormHeader
         title={title[0]}
         description="Please provide your name, email address, and phone number."
       />
 
-      <form className="personal-info-form">
+      <div className="personal-info-form">
         <div className="personal-info-form-item">
           <div className="item-description">
             <label>Name</label>
@@ -62,10 +62,10 @@ const PersonalInfo = () => {
             placeholder="e.g. +44 7128 184 746"
           />
         </div>
-      </form>
+      </div>
 
       <FormFooter />
-    </div>
+    </form>
   );
 };
 

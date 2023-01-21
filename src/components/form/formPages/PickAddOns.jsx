@@ -7,9 +7,9 @@ import "./PickAddOns.scss";
 import CheckMark from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/check-mark.svg";
 
 const PickAddOns = () => {
-  const { title, monthly } = useFormContext();
+  const { title, monthly, next } = useFormContext();
   return (
-    <div className="select-plan-container">
+    <form onSubmit={next} className="select-plan-container">
       <FormHeader
         title={title[2]}
         description="Add-ons help enhance your gaming experience."
@@ -78,7 +78,7 @@ const PickAddOns = () => {
       </div>
 
       <FormFooter />
-    </div>
+    </form>
   );
 };
 
