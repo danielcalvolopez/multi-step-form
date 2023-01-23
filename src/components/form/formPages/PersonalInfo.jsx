@@ -5,7 +5,7 @@ import FormHeader from "../FormHeader";
 import "./PersonalInfo.scss";
 
 const PersonalInfo = () => {
-  const { title, data, setData, next } = useFormContext();
+  const { title, data, setData, next, nameValid } = useFormContext();
 
   const handleName = (event) => {
     setData({ ...data, name: event.target.value });
@@ -28,10 +28,13 @@ const PersonalInfo = () => {
         <div className="personal-info-form-item">
           <div className="item-description">
             <label>Name</label>
-            {/* <label className="error">This field is required</label> */}
+            {!nameValid && (
+              <label className="error">This field is required</label>
+            )}
           </div>
           <Input
-            className="input"
+            type="text"
+            className={!nameValid ? "input input-error" : "input"}
             value={data[0]}
             onChange={handleName}
             placeholder="e.g. Stephen King"
@@ -48,6 +51,7 @@ const PersonalInfo = () => {
             type="email"
             onChange={handleEmail}
             placeholder="e.g. stephenking@lorem.com"
+            name="email"
           />
         </div>
         <div className="personal-info-form-item">

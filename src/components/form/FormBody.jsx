@@ -7,15 +7,15 @@ import ThankYou from "./formPages/ThankYou";
 
 const FormBody = () => {
   const { page } = useFormContext();
-  return (
-    <>
-      {page === 0 && <PersonalInfo />}
-      {page === 1 && <SelectYourPlan />}
-      {page === 2 && <PickAddOns />}
-      {page === 3 && <FinishingUp />}
-      {page === 4 && <ThankYou />}
-    </>
-  );
+
+  const display = {
+    0: <PersonalInfo />,
+    1: <SelectYourPlan />,
+    2: <PickAddOns />,
+    3: <FinishingUp />,
+    4: <ThankYou />,
+  };
+  return <>{display[page]}</>;
 };
 
 export default FormBody;

@@ -16,12 +16,36 @@ export const plans = [
     logo: AdvancedLogo,
   },
   {
-    name: "Arcade",
+    name: "Pro",
     pricePerMonth: 15,
     pricePerYear: 150,
     logo: ProLogo,
   },
 ];
+export const plans2 = {
+  arcade: {
+    name: "Arcade",
+    price: {
+      month: 9,
+      year: 90,
+    },
+    pricePerMonth: 9,
+    pricePerYear: 90,
+    logo: ArcadeLogo,
+  },
+  advanced: {
+    name: "Advanced",
+    pricePerMonth: 12,
+    pricePerYear: 120,
+    logo: AdvancedLogo,
+  },
+  pro: {
+    name: "Pro",
+    pricePerMonth: 15,
+    pricePerYear: 150,
+    logo: ProLogo,
+  },
+};
 
 export const tariff = {
   monthly: "mo",

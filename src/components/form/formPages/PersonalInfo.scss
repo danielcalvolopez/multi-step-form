@@ -40,10 +40,17 @@
         &::placeholder {
           color: var(--Grey);
         }
+
+        &:hover {
+          border: 1px solid var(--Purple);
+        }
       }
 
       .input-error {
         border: 1px solid var(--RedErrors);
+        &:hover {
+          border: 1px solid var(--RedErrors);
+        }
       }
 
       .item-description {
