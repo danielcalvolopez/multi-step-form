@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 
 const FormContext = createContext({});
 
-export const FormmProvider = ({ children, formValues }) => {
+export const FormmProvider = ({ children }) => {
   const title = {
     0: "Personal Info",
     1: "Select your plan",
