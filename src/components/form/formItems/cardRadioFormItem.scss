@@ -31,17 +31,17 @@
 input {
   display: none;
 
-  &[id="arcade"]:checked ~ label[for="arcade"] .card {
+  &[id="Arcade"]:checked ~ label[for="Arcade"] .card {
     background-color: var(--VeryLightGrey);
     border: 1px solid var(--Purple);
     border-radius: 7px;
   }
-  &[id="advanced"]:checked ~ label[for="advanced"] .card {
+  &[id="Advanced"]:checked ~ label[for="Advanced"] .card {
     background-color: var(--VeryLightGrey);
     border: 1px solid var(--Purple);
     border-radius: 7px;
   }
-  &[id="pro"]:checked ~ label[for="pro"] .card {
+  &[id="Pro"]:checked ~ label[for="Pro"] .card {
     background-color: var(--VeryLightGrey);
     border: 1px solid var(--Purple);
     border-radius: 7px;

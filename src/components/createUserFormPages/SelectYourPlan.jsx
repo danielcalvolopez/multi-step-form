@@ -1,13 +1,10 @@
 import FormFooter from "../form/FormFooter";
 import CardRadioFormItem from "../form/formItems/CardRadioFormItem";
-import ArcadeLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/icon-arcade.svg";
-import AdvancedLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/icon-advanced.svg";
-import ProLogo from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/icon-pro.svg";
 import "./SelectYourPlan.scss";
 import ToggleSwitch from "../UI/ToggleSwitch";
 import FormHeader from "../form/FormHeader";
 import useFormContext from "../../hooks/form/useFormContext";
-import { planOptions, plans, tariff } from "../../utils/data/plans";
+import { planOptions, tariff } from "../../utils/data/plans";
 
 const SelectYourPlan = () => {
   const { title, monthly, setMonthly, next } = useFormContext();
