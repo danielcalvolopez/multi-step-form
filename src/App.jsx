@@ -1,10 +1,10 @@
-import Form from "./components/form/Form";
+import CreateUserForm from "./components/CreateUserForm";
 import { FormmProvider } from "./context/form/FormContext";
 
 const App = () => {
   return (
     <FormmProvider>
-      <Form />
+      <CreateUserForm />
     </FormmProvider>
   );
 };

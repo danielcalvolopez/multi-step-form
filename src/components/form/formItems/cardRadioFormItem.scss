@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 138px;
+  height: 160px;
+  border: 1px solid var(--BorderColor);
+  border-radius: 7px;
+  padding: 15px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid var(--Purple);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    h3 {
+      color: var(--Denim);
+    }
+
+    p {
+      color: var(--Grey);
+    }
+  }
+}
+
+input {
+  display: none;
+
+  &[id="arcade"]:checked ~ label[for="arcade"] .card {
+    background-color: var(--VeryLightGrey);
+    border: 1px solid var(--Purple);
+    border-radius: 7px;
+  }
+  &[id="advanced"]:checked ~ label[for="advanced"] .card {
+    background-color: var(--VeryLightGrey);
+    border: 1px solid var(--Purple);
+    border-radius: 7px;
+  }
+  &[id="pro"]:checked ~ label[for="pro"] .card {
+    background-color: var(--VeryLightGrey);
+    border: 1px solid var(--Purple);
+    border-radius: 7px;
+  }
+}

@@ -1,8 +1,8 @@
-import useFormContext from "../../../hooks/form/useFormContext";
-import { addons } from "../../../utils/data/addons";
-import { tariff } from "../../../utils/data/plans";
-import FormFooter from "../FormFooter";
-import FormHeader from "../FormHeader";
+import useFormContext from "../../hooks/form/useFormContext";
+import { addons } from "../../utils/data/addons";
+import { tariff } from "../../utils/data/plans";
+import FormFooter from "../form/FormFooter";
+import FormHeader from "../form/FormHeader";
 import "./PickAddOns.scss";
 import CheckMark from "/Users/daniel/Desktop/CODE/multi-step-form/src/assets/images/check-mark.svg";
 
@@ -77,7 +77,7 @@ const PickAddOns = () => {
         </div>
       </div>
 
-      <FormFooter />
+      <FormFooter buttonContent="Next Step" />
     </form>
   );
 };

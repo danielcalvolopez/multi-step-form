@@ -1,8 +1,8 @@
-import useFormContext from "../../../hooks/form/useFormContext";
-import { addons } from "../../../utils/data/addons";
-import { plans } from "../../../utils/data/plans";
-import FormFooter from "../FormFooter";
-import FormHeader from "../FormHeader";
+import useFormContext from "../../hooks/form/useFormContext";
+import { addons } from "../../utils/data/addons";
+import { plans } from "../../utils/data/plans";
+import FormFooter from "../form/FormFooter";
+import FormHeader from "../form/FormHeader";
 import "./FinishingUp.scss";
 
 const FinishingUp = () => {
@@ -51,7 +51,7 @@ const FinishingUp = () => {
         </div>
       </div>
 
-      <FormFooter />
+      <FormFooter buttonContent="Confirm" />
     </form>
   );
 };

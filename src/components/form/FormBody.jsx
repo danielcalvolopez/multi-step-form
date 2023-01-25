@@ -1,9 +1,9 @@
 import useFormContext from "../../hooks/form/useFormContext";
-import FinishingUp from "./formPages/FinishingUp";
-import PersonalInfo from "./formPages/PersonalInfo";
-import PickAddOns from "./formPages/PickAddOns";
-import SelectYourPlan from "./formPages/SelectYourPlan";
-import ThankYou from "./formPages/ThankYou";
+import FinishingUp from "../createUserFormPages/FinishingUp";
+import PersonalInfo from "../createUserFormPages/PersonalInfo";
+import PickAddOns from "../createUserFormPages/PickAddOns";
+import SelectYourPlan from "../createUserFormPages/SelectYourPlan";
+import ThankYou from "../createUserFormPages/ThankYou";
 
 const FormBody = () => {
   const { page } = useFormContext();

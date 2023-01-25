@@ -22,7 +22,7 @@ export const plans = [
     logo: ProLogo,
   },
 ];
-export const plans2 = {
+export const planOptions = {
   arcade: {
     name: "Arcade",
     price: {

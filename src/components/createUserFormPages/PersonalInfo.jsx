@@ -1,7 +1,7 @@
-import useFormContext from "../../../hooks/form/useFormContext";
-import Input from "../../UI/Input";
-import FormFooter from "../FormFooter";
-import FormHeader from "../FormHeader";
+import useFormContext from "../../hooks/form/useFormContext";
+import Input from "../UI/Input";
+import FormFooter from "../form/FormFooter";
+import FormHeader from "../form/FormHeader";
 import "./PersonalInfo.scss";
 
 const PersonalInfo = () => {
@@ -68,7 +68,7 @@ const PersonalInfo = () => {
         </div>
       </div>
 
-      <FormFooter />
+      <FormFooter buttonContent="Next Step" />
     </form>
   );
 };
