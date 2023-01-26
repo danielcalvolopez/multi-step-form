@@ -25,6 +25,7 @@ const SelectYourPlan = () => {
           {Object.values(planOptions).map(
             ({ name, logo, pricePerMonth, pricePerYear }) => (
               <CardRadioFormItem
+                key={name}
                 name={name}
                 logo={logo}
                 description={`£${monthly ? pricePerMonth : pricePerYear}/

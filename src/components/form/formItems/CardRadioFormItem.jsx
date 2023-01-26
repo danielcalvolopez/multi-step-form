@@ -3,7 +3,7 @@ import "./cardRadioFormItem.scss";
 const CardRadioFormItem = ({ name, logo, description }) => {
   return (
     <>
-      <input type="radio" name="card" id={name} />
+      <input className="input-radio" type="radio" name="card" id={name} />
       <label htmlFor={name}>
         <div className="card">
           <img src={logo} />

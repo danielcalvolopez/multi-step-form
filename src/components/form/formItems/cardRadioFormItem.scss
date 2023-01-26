@@ -28,7 +28,7 @@
   }
 }
 
-input {
+.input-radio {
   display: none;
 
   &[id="Arcade"]:checked ~ label[for="Arcade"] .card {
