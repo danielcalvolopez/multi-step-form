@@ -9,46 +9,4 @@
   border-radius: 10px;
   background-image: url(/src/assets/images/bg-sidebar-desktop.svg);
   background-repeat: no-repeat;
-  .sidebar-step-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    cursor: pointer;
-    .step-number {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      font-size: 14px;
-      border: solid 1px white;
-      padding: 10px;
-      height: 33px;
-      width: 33px;
-      border-radius: 50%;
-    }
-
-    .step-number-current {
-      background-color: var(--SkyBlue);
-      color: var(--Denim);
-      border: none;
-    }
-
-    .step-info {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      p {
-        color: var(--LightBlue);
-        font-size: 12px;
-        text-transform: uppercase;
-      }
-
-      h3 {
-        color: white;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: bold;
-      }
-    }
-  }
 }
