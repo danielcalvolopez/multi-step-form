@@ -44,11 +44,6 @@ export const FormmProvider = ({ children }) => {
   const next = (event) => {
     event.preventDefault();
 
-    if (data.name.length !== 0) {
-      setNameValid(true);
-    }
-    if (data.name.length === 0) return setNameValid(false);
-
     if (page > 3) return;
     setPage((prev) => prev + 1);
   };

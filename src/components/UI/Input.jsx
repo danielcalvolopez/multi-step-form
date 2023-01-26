@@ -1,9 +1,9 @@
-import React from "react";
+import "./Input.scss";
 
-const Input = ({ placeholder, type, value, onChange, className }) => {
+const Input = ({ placeholder, type, value, onChange }) => {
   return (
     <input
-      className={className}
+      className="input"
       placeholder={placeholder}
       type={type}
       value={value}

@@ -1,0 +1,21 @@
+.input {
+  height: 50px;
+  border-radius: 10px;
+  padding: 0 17px;
+  border: 1px solid var(--BorderColor);
+  outline: none;
+  &::placeholder {
+    color: var(--Grey);
+  }
+
+  &:focus {
+    border: 1px solid var(--Purple);
+  }
+}
+
+.input-error {
+  border: 1px solid var(--RedErrors);
+  &:hover {
+    border: 1px solid var(--RedErrors);
+  }
+}

@@ -3,19 +3,20 @@ import Input from "../UI/Input";
 import FormFooter from "../form/FormFooter";
 import FormHeader from "../form/FormHeader";
 import "./PersonalInfo.scss";
+import formInputs from "../../utils/data/formInputs";
 
 const PersonalInfo = () => {
   const { title, data, setData, next, nameValid } = useFormContext();
 
-  const handleName = (event) => {
-    setData({ ...data, name: event.target.value });
-  };
-  const handleEmail = (event) => {
-    setData({ ...data, email: event.target.value });
-  };
-  const handlePhone = (event) => {
-    setData({ ...data, phone: event.target.value });
-  };
+  // const handleName = (event) => {
+  //   setData({ ...data, name: event.target.value });
+  // };
+  // const handleEmail = (event) => {
+  //   setData({ ...data, email: event.target.value });
+  // };
+  // const handlePhone = (event) => {
+  //   setData({ ...data, phone: event.target.value });
+  // };
 
   return (
     <form onSubmit={next} className="personal-info-container">
@@ -25,47 +26,14 @@ const PersonalInfo = () => {
       />
 
       <div className="personal-info-form">
-        <div className="personal-info-form-item">
-          <div className="item-description">
-            <label>Name</label>
-            {!nameValid && (
-              <label className="error">This field is required</label>
-            )}
+        {Object.values(formInputs).map(({ id, name, placeholder, type }) => (
+          <div key={id} className="personal-info-form-item">
+            <div className="item-description">
+              <label>{id}</label>
+            </div>
+            <Input type={type} placeholder={placeholder} name={name} />
           </div>
-          <Input
-            type="text"
-            className={!nameValid ? "input input-error" : "input"}
-            value={data[0]}
-            onChange={handleName}
-            placeholder="e.g. Stephen King"
-            name="name"
-          />
-        </div>
-        <div className="personal-info-form-item">
-          <div className="item-description">
-            <label>Email Address</label>
-            {/* <label className="error">This field is required</label> */}
-          </div>
-          <Input
-            className="input"
-            type="email"
-            onChange={handleEmail}
-            placeholder="e.g. stephenking@lorem.com"
-            name="email"
-          />
-        </div>
-        <div className="personal-info-form-item">
-          <div className="item-description">
-            <label>Phone Number</label>
-            {/* <label className="error">This field is required</label> */}
-          </div>
-          <Input
-            className="input"
-            onChange={handlePhone}
-            type="number"
-            placeholder="e.g. +44 7128 184 746"
-          />
-        </div>
+        ))}
       </div>
 
       <FormFooter buttonContent="Next Step" />

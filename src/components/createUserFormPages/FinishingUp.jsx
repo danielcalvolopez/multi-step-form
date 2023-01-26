@@ -1,6 +1,6 @@
 import useFormContext from "../../hooks/form/useFormContext";
 import { addons } from "../../utils/data/addons";
-import { plans } from "../../utils/data/plans";
+import { planOptions } from "../../utils/data/plans";
 import FormFooter from "../form/FormFooter";
 import FormHeader from "../form/FormHeader";
 import "./FinishingUp.scss";
@@ -22,8 +22,11 @@ const FinishingUp = () => {
               <p onClick={() => setPage(1)}>Change</p>
             </div>
             <div className="plan-price">
-              £{monthly ? plans[0].pricePerMonth : plans[0].pricePerYear}/
-              {monthly ? "mo" : "yr"}
+              £
+              {monthly
+                ? planOptions.arcade.pricePerMonth
+                : planOptions.arcade.pricePerYear}
+              /{monthly ? "mo" : "yr"}
             </div>
           </div>
           <span className="division-line" />
@@ -31,15 +34,21 @@ const FinishingUp = () => {
             <div className="service">
               <p className="description">Online service</p>
               <p className="price">
-                +£{monthly ? addons[0].pricePerMonth : addons[0].pricePerYear}/
-                {monthly ? "mo" : "yr"}
+                +£
+                {monthly
+                  ? addons.online.pricePerMonth
+                  : addons.online.pricePerYear}
+                /{monthly ? "mo" : "yr"}
               </p>
             </div>
             <div className="service">
               <p className="description">Larger storage</p>
               <p className="price">
-                +£{monthly ? addons[1].pricePerMonth : addons[1].pricePerYear}/
-                {monthly ? "mo" : "yr"}
+                +£
+                {monthly
+                  ? addons.storage.pricePerMonth
+                  : addons.storage.pricePerYear}
+                /{monthly ? "mo" : "yr"}
               </p>
             </div>
           </div>
