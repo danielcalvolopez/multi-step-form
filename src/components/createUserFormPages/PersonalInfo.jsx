@@ -6,17 +6,7 @@ import "./PersonalInfo.scss";
 import formInputs from "../../utils/data/formInputs";
 
 const PersonalInfo = () => {
-  const { title, data, setData, next, nameValid } = useFormContext();
-
-  // const handleName = (event) => {
-  //   setData({ ...data, name: event.target.value });
-  // };
-  // const handleEmail = (event) => {
-  //   setData({ ...data, email: event.target.value });
-  // };
-  // const handlePhone = (event) => {
-  //   setData({ ...data, phone: event.target.value });
-  // };
+  const { title, next } = useFormContext();
 
   return (
     <form onSubmit={next} className="personal-info-container">

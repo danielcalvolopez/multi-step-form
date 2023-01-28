@@ -33,8 +33,6 @@ export const FormmProvider = ({ children }) => {
     totalPrice: 0,
   });
 
-  const [nameValid, setNameValid] = useState(undefined);
-
   const back = (event) => {
     event.preventDefault();
     if (page < 1) return;
@@ -74,7 +72,6 @@ export const FormmProvider = ({ children }) => {
         next,
         monthly,
         setMonthly,
-        nameValid,
         handleChange,
       }}
     >
